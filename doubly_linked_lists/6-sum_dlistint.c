@@ -10,6 +10,7 @@
 
 int sum_dlistint(dlistint_t *head)
 {
+
 	int sum = 0;
 	dlistint_t *i;
 
@@ -18,5 +19,5 @@ int sum_dlistint(dlistint_t *head)
 		sum += i->n;
 	}
 
-	return(sum);
+	return (sum);
 }
