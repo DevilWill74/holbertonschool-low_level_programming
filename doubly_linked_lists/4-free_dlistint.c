@@ -1,18 +1,20 @@
-#include "holberton.h"
+#include "lists.h"
 
 /**
- * print_rev - Prints a string in reverse.
- * @s: The string to be printed.
+ * free_dlistint - frees a dlistint_t list.
+ * @head: pointer to the head of the list.
+ *
+ *
  */
-void print_rev(char *s)
+
+void free_dlistint(dlistint_t *head)
 {
-	int len = 0, index;
 
-	while (s[index++])
-		len++;
+	while (head != NULL)
+	{
+		dlistint_t *next = head->next;
 
-	for (index = len - 1; index >= 0; index--)
-		_putchar(s[index]);
-
-	_putchar('\n');
+		free(head);
+		head = next;
+	}
 }
